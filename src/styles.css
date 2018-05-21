@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-head {
+header {
     background: #fff;
     min-height: 80px;
     width: 100%;
@@ -30,7 +30,6 @@ head {
     height: auto;
     position: fixed;
     z-index: 5;
-    top: 79px;
     transition: .3;
 }
 
@@ -61,7 +60,7 @@ head {
     font-weight: bold;
     color: #ccc;
     line-height: 2em;
-    padding: 10px 15px;
+    padding: 10px 9px;
     background: rgb(4, 52, 65);
     text-decoration: none;
     text-shadow: 2px 2px 3px #222;
@@ -141,9 +140,13 @@ head {
 
     img_n img {
         height: 40px;
-        margin-left: -7px;
         margin-top: 9px;
 
+    }
+
+    img_n {
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 }
 
