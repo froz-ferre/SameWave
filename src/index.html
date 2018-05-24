@@ -49,16 +49,67 @@
         <span>10 unreaded messages</span>
       </header>
       <div class="chat-body">
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?</article>
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?</article>
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?</article>
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?</article>
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?</article>
+        <article class="chat friend">
+          <div class="user-photo">
+            
+          </div>
+          <p class="chat-message"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?
+          </p>
+        </article>
+        <article class="chat self">
+          <div class="user-photo">
+            
+          </div>
+          <p class="chat-message"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, exercitationem?
+          </p>
+        </article>
+        <article class="chat self">
+          <div class="user-photo">
+            
+          </div>
+          <p class="chat-message"> 
+            Lorem ipsum dolor sit amet
+          </p>
+        </article>
+        <article class="chat friend">
+          <div class="user-photo">
+            
+          </div>
+          <p class="chat-message"> 
+            Lorem ipsum dolor sit amet consectetur 
+          </p>   
+        </article>
+        <article class="chat self">
+            <div class="user-photo">
+              
+            </div>
+            <p class="chat-message"> 
+              Lorem ipsum dolor sit amet
+            </p>
+          </article>
+          <article class="chat self">
+              <div class="user-photo">
+                
+              </div>
+              <p class="chat-message"> 
+                Lorem ipsum dolor sit amet
+              </p>
+            </article>
+            <article class="chat self">
+                <div class="user-photo">
+                  
+                </div>
+                <p class="chat-message"> 
+                  Lorem ipsum dolor sit amet
+                </p>
+              </article>
       </div>
       <footer class="chat-footer">
         <form action="send" method="post">
-          <input type="text" placeholder="Enter message" name="msg">
-          <input type="submit" value="msg">
+          <textarea name="msg" placeholder="Enter message"></textarea>
+          <input type="submit" value="send">
         </form>
       </footer>
     </div>

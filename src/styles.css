@@ -157,10 +157,135 @@ body {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    z-index: 1000;
-    max-width: 250px;
-    max-height: 500px;
-    overflow: scroll;
+    max-width: 350px;
+    max-height: 500px; 
+    height: 500px;
+    background: orange;
+    overflow: visible;
 }
+
+/* CHAT HEADER */
+
+.chat-opened header {
+    background: rgb(9, 42, 51);
+    height: 50px;
+}
+
+    /* CHAT BODY */
+.chat-body {
+    width: 100%;
+    height: 400px; 
+    overflow-x: hidden;
+    overflow-y: scroll;    
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background: rgba(9, 42, 51, .1);
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(9, 42, 51);
+}
+
+    /* .chat */
+.chat {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat .user-photo {
+    width: 50px;
+    height: 50px;
+    /* height: auto; */
+    border-radius: 50%;
+    margin: 5px 10px;
+    background: #ccc;
+}
+
+.chat .chat-message {
+    width: 70%;
+    padding: 15px;
+    margin: 5px 10px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.friend .chat-message {
+    background: #1ddced;
+}
+
+.self .chat-message {
+    background: #1adda4;
+    order: -1;
+}
+
+/* CHAT FOOTER */
+
+.chat-opened footer {
+    background: rgb(9, 42, 51);
+    height: 50px;
+}
+
+.chat-footer form {
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.chat-footer input[type="submit"], textarea {
+    width: 20%;
+    height: 30px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    background: transparent;
+}
+
+.chat-footer textarea {
+    width: 80%;
+    background: rgb(9, 42, 51);
+    border-right: 1px solid #fff;
+    padding: 5px 10px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    resize: none; 
+    font-size: 16px; 
+}
+
+.chat-footer textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.chat-footer textarea::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+.chat-footer textarea:focus {
+    border: none;
+    border-right: 1px solid #fff;
+    outline: none;
+}
+.chat-footer textarea:o
+
+.chat-footer input[type="submit"] {
+    width: 20%;
+    background: rgb(9, 42, 51);
+
+}
+
+.chat-footer input[type="submit"]:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, .3);
+}
+
+
 
 /* End CHAT */
