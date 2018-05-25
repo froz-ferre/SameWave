@@ -1,0 +1,132 @@
+/* MENU */
+
+#verticalMenu {
+    width: 71px;
+    height: auto;
+    position: fixed;
+    z-index: 5;
+    transition: .3;
+}
+
+#verticalMenu ul {
+    display:  block;
+    width: 54px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+#verticalMenu ul li {
+    display: block;
+    width: 175px;
+    position: relative;
+}
+
+#verticalMenu ul li a {
+    position: relative;
+    display: block;
+    width: 198px;
+    height: auto;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ccc;
+    line-height: 2em;
+    padding: 10px 9px;
+    background: rgb(4, 52, 65);
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #222;
+}
+
+.menu {
+    position: absolute;
+    width: 198px;
+    height: 100%;
+    background: rgb(4, 52, 65);
+    box-shadow: 1px 2px 3px #888;
+    position: fixed;
+    top: 79px;
+    z-index: 3;
+}
+
+.footer {
+    position: absolute;
+    width: 198px;
+    height: 88px;
+    bottom: 22px; 
+    background: rgb(4, 52, 65);
+    margin-bottom: 22px;
+    z-index: 13;
+    border-top: 1px solid rgb(9, 42, 51);
+    color: rgb(52, 100, 113);
+    text-align: center;
+}
+
+.img_n  {
+    transition: .3s;
+}
+
+.img_n img {
+    width: 40px;
+    height: 35px;
+}
+
+.img_n:hover {
+    margin-left: 5px;
+    transition: .3s;
+}
+
+/* media */
+
+@media screen and (max-width: 780px) {
+    .menu {
+        width: 57px;
+        transition: .3s;
+    }
+
+    #verticalMenu ul li a{
+        width: 57px;
+        transition: .3s;
+    }
+
+    #verticalMenu ul li {
+        width: 57px;
+    }
+
+    span {
+        display: none;
+    }
+
+    .footer {
+        transform: rotate(90deg);
+        left: -77px;
+        border: none;
+        height: 24px;
+        bottom: 77px;
+        text-align: left;
+        padding-bottom: 25px;
+        padding-top: 6px;
+    }
+
+    img_n img {
+        height: 40px;
+        margin-top: 9px;
+
+    }
+
+    img_n {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 779px) {
+    .img_n {
+        display: none;
+    } 
+}
+
+/* End MENU */

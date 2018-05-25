@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './shared/chat/chat.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { DashboardComponent } from './core/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     ChatComponent,
     MenuComponent,
     NotFoundComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
