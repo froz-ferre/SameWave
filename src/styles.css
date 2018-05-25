@@ -70,14 +70,13 @@ body {
     position: absolute;
     width: 198px;
     height: 88px;
-    bottom: -29px;
+    bottom: 22px; 
     background: rgb(4, 52, 65);
-    margin-bottom: 78px;
+    margin-bottom: 22px;
     z-index: 13;
     border-top: 1px solid rgb(9, 42, 51);
     color: rgb(52, 100, 113);
     text-align: center;
-    margin-top: 22px;
 }
 
 .img_n  {
