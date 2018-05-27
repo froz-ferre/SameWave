@@ -8,13 +8,8 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './shared/chat/chat.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
-import { SearchComponent } from './core/dashboard/search/search.component';
-import { Component } from './core/.component';
-import { LastReleaseComponent } from './core/dashboard/last-release/last-release.component';
-import { MostPopularComponent } from './core/dashboard/most-popular/most-popular.component';
-import { ListViewComponent } from './core/dashboard/list-view/list-view.component';
-import { SongCardComponent } from './core/dashboard/shared/song-card/song-card.component';
 
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -23,16 +18,11 @@ import { SongCardComponent } from './core/dashboard/shared/song-card/song-card.c
     MenuComponent,
     NotFoundComponent,
     DashboardComponent,
-    SearchComponent,
-    Component,
-    LastReleaseComponent,
-    MostPopularComponent,
-    ListViewComponent,
-    SongCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
