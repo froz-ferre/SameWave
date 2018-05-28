@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   constructor(protected _musicApiService: MusicApiService) { }
 
   ngOnInit() {
-    this.artists = this._musicApiService.getChartArtists().subscribe();
+    this.artists = this._musicApiService.getChartArtists();
   }
 
 }

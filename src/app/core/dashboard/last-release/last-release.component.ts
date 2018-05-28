@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-last-release',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastReleaseComponent implements OnInit {
 
-  constructor(protected _) { }
+  @Input() artists: Observable<any>;
+
+  constructor() { }
+  
+  
 
   ngOnInit() {
+    this.artists.subscribe();
+    console.log(this.artists);
   }
 
 }
