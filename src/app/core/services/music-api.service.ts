@@ -4,6 +4,12 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MusicApiService {
+  /*
+    TODO: 
+    Поправить урлы, сделать минимум повторений.
+    Подписаться на топ артистов и преобразовать данные
+    (подключить модель)
+  */
 
   chartUrl = 'https://api.deezer.com/chart/tracks';
   lastFmUrl = 'http://ws.audioscrobbler.com/2.0/';

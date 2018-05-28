@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MusicApiService } from '../services/music-api.service';
+import { Artist } from '../model/artist.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,7 @@ import { MusicApiService } from '../services/music-api.service';
 })
 export class DashboardComponent implements OnInit {
 
-  artists;
+  artists: Artist[];
   
   /* Передать в ласт-релиз артистов и отобразить их там */
 

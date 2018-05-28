@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Artist } from '../../model/artist.model';
 
 @Component({
   selector: 'app-last-release',
@@ -8,14 +9,11 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LastReleaseComponent implements OnInit {
 
-  @Input() artists: Observable<any>;
+  @Input() artists: Artist[];
 
   constructor() { }
-  
-  
 
   ngOnInit() {
-    this.artists.subscribe();
     console.log(this.artists);
   }
 
