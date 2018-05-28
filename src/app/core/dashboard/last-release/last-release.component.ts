@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastReleaseComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected _) { }
 
   ngOnInit() {
   }

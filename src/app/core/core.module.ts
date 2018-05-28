@@ -7,7 +7,7 @@ import { MostPopularComponent } from './dashboard/most-popular/most-popular.comp
 import { SearchComponent } from './dashboard/search/search.component';
 import { SongCardComponent } from './dashboard/shared/song-card/song-card.component';
 
-import { DeezerApiService } from './services/deezer-api.service';
+import { MusicApiService } from './services/music-api.service';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { DeezerApiService } from './services/deezer-api.service';
     SongCardComponent
   ],
   providers: [
-    DeezerApiService
+    MusicApiService
   ],
   exports: [
     LastReleaseComponent,

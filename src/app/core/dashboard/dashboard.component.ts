@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DeezerApiService } from '../services/deezer-api.service';
+import { MusicApiService } from '../services/music-api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,12 +9,14 @@ import { DeezerApiService } from '../services/deezer-api.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(protected _deezerApiService: DeezerApiService) { }
-
+  artists;
   
+  /* Передать в ласт-релиз артистов и отобразить их там */
+
+  constructor(protected _musicApiService: MusicApiService) { }
 
   ngOnInit() {
-
+    this.artists = this._musicApiService.getChartArtists().subscribe();
   }
 
 }
