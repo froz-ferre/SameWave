@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class DeezerApiService {
 
-  constructor() { }
+  constructor(protected _http: HttpClient) { }
 
 }
