@@ -2,6 +2,7 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 
 import { MusicApiService } from '../services/music-api.service';
 import { Artist } from '../model/artist.model';
+import { map, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,23 +11,30 @@ import { Artist } from '../model/artist.model';
 })
 export class DashboardComponent implements OnInit, AfterContentInit{
 
-  artists: Artist[];
-  art;
+  artists: Artist[] = [];
 
   /* Передать в ласт-релиз артистов и отобразить их там */
 
   constructor(protected _musicApiService: MusicApiService) { }
 
-  ngOnInit() { }
-
-
-  ngAfterContentInit() {
-    //Called after ngOnInit when the component's or directive's content has been initialized.
-    //Add 'implements AfterContentInit' to the class.
+  ngOnInit() {
     this._musicApiService.getChartArtists()
-    .subscribe(res => this.art = res);
-    setTimeout(() => console.log(this.art), 3000);
-    /* На этом этапе получаем 50 ебаных исполнителей */
-  }
+    .pipe(map(res => {
+      return res['artists']['artist'];
+    }))
+    .subscribe(res => {
+      for (let i = 0; i < res.length; i++) {
+        const artist = new Artist (
+          res.name,
+          res.url
+          // res.image[2]['#text']
+        );
+        this.artists.push(artist);
+      }
+    });
+   }
+
+
+  ngAfterContentInit() { }
 
 }

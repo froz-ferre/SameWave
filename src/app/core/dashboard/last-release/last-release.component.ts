@@ -13,8 +13,6 @@ export class LastReleaseComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.artists);
-  }
+  ngOnInit() { }
 
 }
