@@ -24,7 +24,7 @@ export class MusicApiService {
   }
 
   getChartArtists()/*: Observable<Artist[]> */{
-    return this._http.get(`${this.lastFmUrl}?method=chart.gettopartists&api_key=${this.api_key}&format=json`);
+    return this._http.get<any>(`${this.lastFmUrl}?method=chart.gettopartists&api_key=${this.api_key}&format=json`);
   }
 
 }
