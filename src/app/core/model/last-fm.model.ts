@@ -5,3 +5,9 @@ export class Artist {
         public image?: string     //
     ) {}
 }
+
+export interface ChartArtistsApi {
+    // pass
+    // Object({'artists': {'artist': [{}]}});
+    image: Array<Object>;
+}

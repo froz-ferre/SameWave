@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Artist } from '../../model/artist.model';
+import { Artist } from '../../model/last-fm.model';
 
 @Component({
   selector: 'app-last-release',
