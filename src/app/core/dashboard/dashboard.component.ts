@@ -11,7 +11,7 @@ import { map, filter } from 'rxjs/operators';
 })
 export class DashboardComponent implements OnInit, AfterContentInit{
 
-  artists; // : Artist[] = [];
+  artists: Artist[] = [];
 
   /* Передать в ласт-релиз артистов и отобразить их там */
 
@@ -19,25 +19,21 @@ export class DashboardComponent implements OnInit, AfterContentInit{
 
   ngOnInit() {
     this._musicApiService.getChartArtists()
-    .pipe(map(res => res['artists']['artist']))
-    .subscribe(res => this.artists = res,
-    err => console.log(err),
-  () => console.log(this.artists));
-    // .pipe(map(res => {
-    //   res = res['artists']['artist'];
-    //   return res;
-    // }))
-    // .subscribe(res => this.artists = res);
-    // .subscribe(res => {
-    //   for (let i = 0; i < res.length; i++) {
-    //     const artist = new Artist (
-    //       res.name,
-    //       res.url
-    //       // res.image[2]['#text']
-    //     );
-    //     this.artists.push(artist);
-    //   }
-    // });
+    .pipe(map(res => res['artists']['artist'])) // Тут массив из 50ти объектов
+    .subscribe(
+      /* res => this.artists = res, это работает */
+      res => {
+        res.forEach(element => {
+          const temp = new Artist(
+              element.name,
+              element.url,
+              element.image[2]['#text']
+            );
+            this.artists.push(temp);
+        });
+      },
+      err => console.log(err),
+      () => console.log(this.artists));
    }
 
 
