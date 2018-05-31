@@ -14,7 +14,7 @@ import { MusicApiService } from './services/music-api.service';
     CommonModule
   ],
   declarations: [
-    LastReleaseComponent,
+    // LastReleaseComponent,
     ListViewComponent,
     MostPopularComponent,
     SearchComponent,
@@ -24,7 +24,7 @@ import { MusicApiService } from './services/music-api.service';
     MusicApiService
   ],
   exports: [
-    LastReleaseComponent,
+    // LastReleaseComponent,
     ListViewComponent,
     MostPopularComponent,
     SearchComponent,

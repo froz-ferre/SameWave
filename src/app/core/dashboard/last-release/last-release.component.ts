@@ -11,7 +11,9 @@ export class LastReleaseComponent implements OnInit {
 
   @Input() artists: Artist[];
 
-  constructor() { }
+  constructor(private artist: Artist) {
+    this.artist = this.artists[0];
+  }
 
   ngOnInit() { }
 

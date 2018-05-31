@@ -11,6 +11,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 
 import { CoreModule } from './core/core.module';
+import { LastReleaseComponent } from './core/dashboard/last-release/last-release.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CoreModule } from './core/core.module';
     MenuComponent,
     NotFoundComponent,
     DashboardComponent,
+    LastReleaseComponent
   ],
   imports: [
     BrowserModule,
